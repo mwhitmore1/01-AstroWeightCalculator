@@ -89,12 +89,8 @@ function addItem(itemName){
 }
 
 
-function addFromTextBox(){
-	var newName = document.getElementById('new-item').value;
-	addItem(newName);
-}
-
-
+// function below populates the drop box with the names of the planets taken from 
+// the planets object.
 var createPlanetDrop = function(){
 	planetNames = Object.keys(planets);
 	for (planetName in planetNames){
