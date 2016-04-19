@@ -19,7 +19,7 @@ function calculateWeight(){
 	// check if the wight entered is a number and alert if not.
 	var notNum = isNaN(weight);
 	if (notNum){
-		return alert("The weight entered is not a number");
+		return false;
 	}
 
 	var multiplier = planets[planet];
@@ -35,6 +35,10 @@ function displayWeight(){
 	var label = document.getElementById("output");
 	var dropBox = document.getElementById("drop-down");
 	var planet = dropBox.value
+	if (!output){
+		label.innerHTML = "The weight entered is not a number";
+		return
+	}
 	label.innerHTML = "Your weight on " + planet + " is " + output + " pounds."
 }
 
